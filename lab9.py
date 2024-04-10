@@ -18,6 +18,14 @@ def decoder(p):
         y += str(x[i])
     return y
 
+
+def decoder(password):
+    decoded = ""
+    for i in password:
+        decoded = decoded + str(int(i)-3)
+    return decoded
+
+
 if __name__ == "__main__":
     print(decoder(12345897))
     while True:
