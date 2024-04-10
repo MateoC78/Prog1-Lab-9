@@ -19,7 +19,7 @@ def decoder(password: str) -> str:
 
 
 if __name__ == "__main__":
-    print(decoder("12345897"))
+    x = 0
     while True:
         print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
         choice = input("Please enter an option: ")
