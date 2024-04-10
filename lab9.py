@@ -8,26 +8,18 @@ def encoder(p):
         y += str(x[i])
     return y
 
-def decoder(p):
-    x = [int(y) for y in str(p)]
-    y = ""
-    for i in range(8):
-        x[i] -= 3
-        if x[i] < 0:
-            x[i] += 10
-        y += str(x[i])
-    return y
-
-
-def decoder(password):
+def decoder(password: str) -> str:
     decoded = ""
     for i in password:
-        decoded = decoded + str(int(i)-3)
+        num = int(i)-3
+        if num < 0:
+            num +=10
+        decoded = decoded + str(num)
     return decoded
 
 
 if __name__ == "__main__":
-    print(decoder(12345897))
+    print(decoder("12345897"))
     while True:
         print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
         choice = input("Please enter an option: ")
